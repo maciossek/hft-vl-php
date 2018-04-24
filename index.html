@@ -1,385 +1,419 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>HFT IPR PHP</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/custom.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+  <title>HFT IPR PHP</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/atom-one-dark.css">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/theme/black.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-		<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/atom-one-dark.css">
 
-	</head>
-	<!-- https://media.giphy.com/media/OvzMNfWETBoKQ/giphy.gif -->
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section data-background-size="cover" data-background-image="https://media.giphy.com/media/9O8zc1GTspWx2/giphy.gif">
-					<h1 class="title">IPR</h1>
-					<h3 class="title">PHP</h3>
-				</section>
-				<section>
-					<section>
-						<h2>Frontend vs Backend</h2>
-						<img style="border: 0" src="https://media.giphy.com/media/xTiIzAWLqreqgY1I0o/giphy.gif" />
-					</section>
-					<section data-markdown>
-						### Aufgaben Frontend
-						- Schnittstelle zum Benutzer via GUI
-						- Saubere Darstellung auf versch. Geräten (responsive)
-						- Reagieren auf Benutzereingaben
-						- HTML, CSS, JavaScript
-					</section>
-					<section data-markdown>
-						### Aufgaben Backend
-						- Schnittstelle zur Datenbank
-						- Schnittstelle zum Frontend
-						- Reagieren auf Anfragen des Frontends
-						- Authentifizierung
-						- Ruby on Rails, PHP, Python, SQL, Java, Scala, …
-					</section>
-				</section>
-				<section>
-					<section>
-						<h2>Allgemeines</h2>
-						<ul>
-							<li>PHP: Hypertext Preprocessor</li>
-							<li>Serverseitige & interpretierte Scriptsprache</li>
-							<li>Offene Implementierung</li>
-							<li>Objektorientierung möglich</li>
-							<li>Keine statische Typisierung</li>
-						</ul>
-					</section>
-					<section>
-						<h2>PHP 👍</h2>
-						<ul>
-							<li>Viele Frameworks (Symfony, Zend, cakePHP, …)</li>
-							<li>Viele Resourcen im Web</li>
-							<li>IDE Support</li>
-							<li>Einfacher Einstieg</li>
-							<li>Package Manager: Pear, Composer</li>
-						</ul>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+  <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-						<!--<img src="http://www.nikola-breznjak.com/blog/wp-content/uploads/2014/10/scepticKid.jpg" />-->
-					</section>
-					<section>
-						<h2>PHP 👎</h2>
-						<ul>
-							<li>Viel gescripte kann die Code Qualität mindern</li>
-							<li>SQL Injections müssen aktiv abgefangen werden</li>
-							<li><a href="http://www.phpwtf.org/" target="_blank">http://www.phpwtf.org/</a></li>
-							<li><a href="http://phpsadness.com/" target="_blank">http://phpsadness.com/</a></li>
-						</ul>
-					</section>
-					<section data-markdown>
-						## PHP ausführen
-						```
-						&lt;?php … ?&gt;
-						```
+</head>
+<!-- https://media.giphy.com/media/OvzMNfWETBoKQ/giphy.gif -->
 
-						Lokaler Dev Server oder <a href="https://www.apachefriends.org/de/index.html" target="_blank">XAMPP</a>
-						```
-						php -S localhost:8000
-						```
-					</section>
-					<section>
-						<h2>Wie funktioniert PHP</h2>
-						<ul>
-							<li>Ist nicht nach außen sichtbar, sondern nur der gerenderte Inhalt (wie Z.B. HTML)</li>
-							<li>Wird zur Ladezeit bzw. Aufruf auf dem Server ausgeführt.</li>
-						</ul>
-					</section>
-					<section>
-						<h2>Für was wird PHP verwendet?</h2>
-						<ul>
-							<li>Web-Software wie bspw. CMS Systeme oder Facebook</li>
-							<li>Middleware zwischen Frontend und Datenbank</li>
-							<li>REST Schnittstellen bauen</li>
-							<li>mit *.phar Archiven ausführbare Programme erstellen</li>
-							<li>…</li>
-						</ul>
-					</section>
-				</section>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section data-background-size="cover" data-background-image="https://media.giphy.com/media/9O8zc1GTspWx2/giphy.gif">
+        <h1 class="title">IPR</h1>
+        <h3 class="title">PHP</h3>
+      </section>
+      <section>
+        <section>
+          <h2>Frontend vs Backend</h2>
+          <img style="border: 0" src="https://media.giphy.com/media/xTiIzAWLqreqgY1I0o/giphy.gif" />
+        </section>
+        <section data-markdown>
+          ### Aufgaben Frontend
 
-				<section>
-					<section data-markdown>
-						## PHP Sprachelemente
+          - Schnittstelle zum Benutzer via GUI
+          - Saubere Darstellung auf versch. Geräten (responsive)
+          - Reagieren auf Benutzereingaben
+          - HTML, CSS, JavaScript
+      </section>
+      <section data-markdown>
+        ### Aufgaben Backend
 
-						```
-						$number = 12;            // Keine Typdeklaration
-						$yolo = 'haha';
-						$yolo = 12;
+        - Schnittstelle zur Datenbank
+        - Schnittstelle zum Frontend
+        - Reagieren auf Anfragen des Frontends
+        - Authentifizierung
+        - Ruby on Rails, PHP, Python, SQL, Java, Scala, …
+      </section>
+      </section>
+      <section>
+        <section>
+          <h2>Allgemeines</h2>
+          <ul>
+            <li>PHP: Hypertext Preprocessor</li>
+            <li>Serverseitige & interpretierte Scriptsprache</li>
+            <li>Offene Implementierung</li>
+            <li>Objektorientierung möglich</li>
+            <li>Keine statische Typisierung</li>
+          </ul>
+        </section>
+        <section>
+          <h2>PHP 👍</h2>
+          <ul>
+            <li>Viele Frameworks (Symfony, Zend, cakePHP, …)</li>
+            <li>Viele Resourcen im Web</li>
+            <li>IDE Support</li>
+            <li>Einfacher Einstieg</li>
+            <li>Package Manager: Pear, Composer</li>
+          </ul>
 
-						/* Ein Kommentar, der über mehrere
-						Zeilen geht */
+          <!--<img src="http://www.nikola-breznjak.com/blog/wp-content/uploads/2014/10/scepticKid.jpg" />-->
+        </section>
+        <section>
+          <h2>PHP 👎</h2>
+          <ul>
+            <li>Viel gescripte kann die Code Qualität mindern</li>
+            <li>SQL Injections müssen aktiv abgefangen werden</li>
+            <li><a href="http://www.phpwtf.org/" target="_blank">http://www.phpwtf.org/</a></li>
+            <li><a href="http://phpsadness.com/" target="_blank">http://phpsadness.com/</a></li>
+          </ul>
+        </section>
+        <section data-markdown>
+          ## PHP ausführen
 
-						// Einzeiliger Kommentar
+          ```
+          &lt;?php … ?&gt;
+          ```
 
-						$a = array('a' => 'asdf');
-						echo "&lt;pre&gt;";
-						print_r($a);
-						var_dump($a);
-						echo "&lt;/pre&gt;";
-						```
-					</section>
-					<section data-markdown>
-						## PHP Strings
+          Lokaler Dev Server oder
+          <a href="https://www.apachefriends.org/de/index.html" target="_blank">XAMPP</a>
+          ```
+          php -S localhost:8000
+          ```
+        </section>
+        <section>
+          <h2>Wie funktioniert PHP</h2>
+          <ul>
+            <li>Ist nicht nach außen sichtbar, sondern nur der gerenderte Inhalt (wie Z.B. HTML)</li>
+            <li>Wird zur Ladezeit bzw. Aufruf auf dem Server ausgeführt.</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Für was wird PHP verwendet?</h2>
+          <ul>
+            <li>Web-Software wie bspw. CMS Systeme oder Facebook</li>
+            <li>Middleware zwischen Frontend und Datenbank</li>
+            <li>REST Schnittstellen bauen</li>
+            <li>mit *.phar Archiven ausführbare Programme erstellen</li>
+            <li>…</li>
+          </ul>
+        </section>
+      </section>
 
-						```
-						// String mit doppelten " erlauben das einsetzen von Variablen
-						$world="Welt";
-						$welcome="Hallo $world"; // vs.
-						$welcome='Hallo $world';
+      <section>
+        <section>
+          <h2>PHP Sprachelemente</h2>
+          <pre><code class="php" data-trim data-noescape>
+            $number = 12; // Keine Typdeklaration
+            $yolo = 'haha';
+            $yolo = 12;
 
-						// ASCII-Control Codes erlaubt:
-						$welcome="Hallo\nWelt";
+            /* Ein Kommentar, der über mehrere Zeilen geht */
 
-						// Oder HTML
-						$welcome="Hallo&lt;br/&gt;Welt";
+            // Einzeiliger Kommentar
+            $a = array('a' => 'asdf');
+            echo "&lt;pre&gt;";
+            print_r($a);
+            var_dump($a);
+            echo "&lt;/pre&gt;";
+          </code></pre>
+        </section>
+        <section>
+          <h2>PHP Strings</h2>
+          <pre><code class="php" data-trim data-noescape>
+            // String mit doppelten " erlauben das einsetzen von Variablen
+            $world="Welt";
 
-						// String verbinden mit "."
-						$name=$firstname . '  ' . $lastname;
-						```
-					</section>
-					<section data-markdown>
-						## PHP Statements
+            $welcome="Hallo $world";
+            // vs.
+            $welcome='Hallo $world';
 
-						```
-						if ($a&lt;5) {
-						  $b=$a+10;
-						} else {
-							$b=$a*2;
-						}
+            // ASCII-Control Codes erlaubt:
+            $welcome="Hallo\nWelt";
 
-						for ($i=0; $i&lt;10; $i++){
-							echo $i;
-						}
+            // Oder HTML
+            $welcome="Hallo&lt;br/&gt;Welt";
+            // String verbinden mit "."
+            $name=$firstname . ' ' . $lastname;
+          </code></pre>
+        </section>
+        <section>
+          <h2>PHP Statements</h2>
 
-						```
-					</section>
-					<section data-markdown>
-						## PHP Globals
+          <pre><code class="php" data-trim data-noescape>
+            if ($a&lt;5) {
+              $b=$a+10;
+            } else {
+              $b=$a*2;
+            }
 
-						```
-						$GLOBALS
-						$_SERVER
-						$_GET
-						$_POST
-						$_FILES
-						$_COOKIE
-						$_SESSION
-						$_REQUEST
-						$_ENV
+            for ($i=0; $i&lt;10; $i++){
+              echo $i;
+            }
+          </code></pre>
+        </section>
+        <section>
+          <h2>PHP Globals</h2>
+          <pre><code class="php" data-trim data-noescape>
+            $GLOBALS
+            $_SERVER
+            $_GET
+            $_POST
+            $_FILES
+            $_COOKIE
+            $_SESSION
+            $_REQUEST
+            $_ENV
+            $ip = $_SERVER['REMOTE_ADDR'];
+          </code></pre>
+        </section>
+        <section>
+          <h2>PHP OOP</h2>
+          <pre><code class="php" data-trim data-noescape>
+            class Person {
+              public $firstname;
+              public $lastname;
+              private $age;
 
-						$ip = $_SERVER['REMOTE_ADDR'];
-						```
-					</section>
-					<section>
-						<h2> PHP OOP</h2>
-						<pre><code class="php" data-trim data-noescape>
-							class Person {
-							  public $firstname;
-								public $lastname;
-							  private $age;
+              function __construct($firstname, $lastname) {
+                $this->firstname = $firstname;
+                $this->lastname = $lastname;
+              }
+            }
 
-							  function __construct($firstname, $lastname) {
-									$this->firstname = $firstname;
-							    $this->lastname = $lastname;
-							  }
-							}
+            $martin = new Person("Martin", "Sonneborn");
+          </code></pre>
+        </section>
+        <section>
+          <h2>PHP __autoload</h2>
 
-							$martin = new Person("Martin", "Sonneborn");
-						</code></pre>
-					</section>
-					<section data-markdown>
-						## PHP __autoload
+          <pre><code class="php" data-trim data-noescape>
+            function __autoload($classname) {
+              $filename = "./". $classname .".class.php";
+              include_once($filename);
+            }
+          </code></pre>
+        </section>
+        <section>
+          <h2>Error Handling</h2>
 
-						<pre><code class="php" data-trim data-noescape>
-							function __autoload($classname) {
-							    $filename = "./". $classname .".class.php";
-							    include_once($filename);
-							}
-						</code></pre>
-					</section>
-					<section data-markdown>
-						## Error Handling
+          <pre><code class="php" data-trim data-noescape>
+            try {
+            …
+            } catch (Exception $e) {
+            …
+            }
+          </code></pre>
+        </section>
+        <section>
+          <h2>Composer dependencies<h2>
+            <small>Erwartet eine Composer JSON</small>
 
-						<pre><code class="php" data-trim data-noescape>
-							try {
-								…
-							} catch (Exception $e) {
-								…
-							}
-						</code></pre>
-					</section>
-					<section data-markdown>
-						## Composer dependencies
+            <pre><code class="json" data-trim data-noescape style="font-size: 20px; line-height: 1em">
+              {
+                "name": "mathiasmaciossek/hft-vl-06-examples",
+                "type": "project",
+                "require": {
+                    "raveren/kint": "^1.1"
+                },
+                "autoload": {
+                    "psr-4": { "": "src/" }
+                },
+                "authors": [
+                    {
+                        "name": "Mathias Maciossek",
+                        "email": "mathias.maciossek@gmail.com"
+                    }
+                ]
+              }
+            </code></pre>
+          </section>
+      </section>
 
-						Erwartet eine Composer JSON
+      <section>
+        <section data-markdown>
+        ## Datenbanken
 
-						```
-						{
-						    "name": "mathiasmaciossek/hft-vl-06-examples",
-						    "type": "project",
-						    "require": {
-						        "raveren/kint": "^1.1"
-						    },
-						    "autoload": {
-						        "psr-4": { "": "src/" }
-						    },
-						    "authors": [
-						        {
-						            "name": "Mathias Maciossek",
-						            "email": "mathias.maciossek@gmail.com"
-						        }
-						    ]
-						}
-						```
-					</section>
-				</section>
+        - Persistente Speicherung von Daten mit und ohne Schema
+        - SQL Datenbanken: (MSSQL, PostgreSQL, MariaDB, MySQL, …)
+        - NOSQL Datenbanken: (MongoDB, CouchDB, Neo4j, Cassandra, …)
+        </section>
+        <section>
+          <h2>CAP Theorem</h2>
+          <img style="border: 0; height: 50vh;" src="./images/nathan-hursts-entscheidungspyramide-zu-nosql.png" />
+        </section>
+        <section data-markdown>
+          > MySQL + PHP + PHPMyAdmin = ❤️
 
-				<section>
-					<section data-markdown>
-						## Datenbanken
+          ```
+          URL: 193.196.143.168
+          Username: mm8s_BENUTZERNAME zB. mm8s_81ayme1bif
+          Passwort: bitteaendern
+          ```
 
-						- Persistente Speicherung von Daten mit und ohne Schema
-						- SQL Datenbanken: (MSSQL, PostgreSQL, MariaDB, MySQL, …)
-						- NOSQL Datenbanken: (MongoDB, CouchDB, Neo4j, Cassandra, …)
-					</section>
-					<section>
-						<h2>CAP Theorem</h2>
-						<img style="border: 0; height: 50vh;" src="./images/nathan-hursts-entscheidungspyramide-zu-nosql.png" />
-					</section>
-					<section data-markdown>
-						> MySQL + PHP + PHPMyAdmin = ❤️
+          ```sql
+          SET PASSWORD FOR 'user-name-here'@'%' = PASSWORD('new-password-here');
+          ```
+          </code></pre>
+        </section>
+        <section>
+          <h2>Tabelle anlegen</h2>
 
-						```
-						URL: 193.196.143.168
-						Username: mm7w_BENUTZERNAME zB. mm7w_61buem1bif
-						Passwort: bitteaendern
-						```
+          <pre><code class="sql" data-trim data-noescape>
+            CREATE TABLE `users` (
+            `id` int unsigned NOT NULL AUTO_INCREMENT,
+            `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+            `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+            `firstname` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+            `lastname` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+            `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+            `updated_at` timestamp NULL DEFAULT NULL,
+            PRIMARY KEY (`id`), UNIQUE (`email`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+          </code></pre>
+        </section>
+        <section>
+          <h2>PHP mit der Datenbank verbinden _mysqli_</h2>
 
-						<pre><code class="sql" data-trim data-noescape>
-							SET PASSWORD FOR 'user-name-here'@'%' = PASSWORD('new-password-here');
-						</code></pre>
-					</section>
-					<section data-markdown>
-						## Tabelle anlegen
+          <pre><code class="php" data-trim data-noescape>
+            $user = 'root';
+            $password = 'root';
+            $db = 'hft-06-03';
+            $host = 'localhost';
+            $port = 8889;
 
-						<pre><code class="sql" data-trim data-noescape>
-							CREATE TABLE `users` (
-							`id` int unsigned NOT NULL AUTO_INCREMENT,
-							`email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-							`password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-							`firstname` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-							`lastname` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-							`created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-							`updated_at` timestamp NULL DEFAULT NULL,
-							PRIMARY KEY (`id`), UNIQUE (`email`)
-							) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-						</code></pre>
-					</section>
-					<section data-markdown>
-						## PHP mit der Datenbank verbinden _mysqli_
+            $database = new mysqli($host, $user, $password, $db, $port);
 
-						<pre><code class="php" data-trim data-noescape>
-							$user = 'root';
-							$password = 'root';
-							$db = 'hft-06-03';
-							$host = 'localhost';
-							$port = 8889;
+            if ($database->connect_error) {
+                die('Connect Error (' . $database->connect_errno . ') ' . $database->connect_error);
+            }
+          </code></pre>
+        </section>
+        <section>
+          <h2>SQL Statement SELECT</h2>
 
-							$database = new mysqli($host, $user, $password, $db, $port);
+          <pre><code class="sql" data-trim data-noescape>
+            SELECT * FROM users WHERE users.id = 1;
+            SELECT firstname FROM users WHERE users.id = 1;
+            SELECT * FROM users WHERE users.email = 'asd@asd.de';
+            SELECT * FROM users WHERE id > 1;
+          </code></pre>
+        </section>
+        <section>
+          <h2>SQL Statement INSERT</h2>
 
-							if ($database->connect_error) {
-							    die('Connect Error (' . $database->connect_errno . ') ' . $database->connect_error);
-							}
-						</code></pre>
-					</section>
-					<section data-markdown>
-						## SQL Statement SELECT
+          <pre><code class="sql" data-trim data-noescape>
+            INSERT INTO `users` (`email`, `password`, `firstname`, `lastname`)
+            VALUES ('mathias.maciossek@gmail.com', 'test', 'Mathias', 'Maciossek');
+          </code></pre>
+        </section>
+        <section>
+          <h2>Mit PHP DB speichern</h2>
 
-						<pre><code class="sql" data-trim data-noescape>
-							SELECT * FROM users WHERE users.id = 1;
-							SELECT firstname FROM users WHERE users.id = 1;
-							SELECT * FROM users WHERE users.email = 'asd@asd.de';
-							SELECT * FROM users WHERE id > 1;
-						</code></pre>
-					</section>
-					<section data-markdown>
-						## SQL Statement INSERT
+          <pre><code class="php" data-trim data-noescape>
+            $stmt = $conn->prepare("INSERT INTO users (firstname, lastname, email) VALUES (?, ?, ?)");
 
-						<pre><code class="sql" data-trim data-noescape>
-							INSERT INTO `users` (`email`, `password`, `firstname`, `lastname`)
-							VALUES ('mathias.maciossek@gmail.com', 'test', 'Mathias', 'Maciossek');
-						</code></pre>
-					</section>
-					<section data-markdown>
-						## Mit PHP Datenauslesen
+            $stmt->bind_param("sss", $firstname, $lastname, $email);
 
-						<pre><code class="php" data-trim data-noescape>
-							$result = $mysqli->query("SELECT * FROM users");
-							while ($row = $result->fetch_assoc()) {
-							  echo $row["firstname"];
-							  echo " ";
-							  echo $row["lastname"];
-							  echo "<br/>";
-							}
-						</code></pre>
-					</section>
-				</section>
-				<section>
-					<section>
-						<h2>Übung</h2>
-							<ul>
-								<li>Legen Sie auf dem Server ein neues Verzeichnis an: <code class="hljs">~/public_html/PHP/</code></li>
-								<li>Bauen sie ein simples Formular mit HTML und PHP. Styling ist zu vernachlässigen</li>
-								<li>Das Prinzip soll in die Richtung Gästebuch gehen.</li>
-								<li>Beim Absenden des Formulars, sollen neue Werte in eine Datenbank geschrieben werden.</li>
-								<li>Zeigen sie darüber/darunter/daneben die Einträge der Tabelle</li>
-							</ul>
-					</section>
-					<section>
-						<h2>Weitere Links</h2>
-						<ul>
-							<li><a href="https://www.w3schools.com/php/" target="_blank">W3Schools PHP Tutorial</a></li>
-							<li><a href="https://www.apachefriends.org/de/index.html" target="_blank">XAMPP</a></li>
-							<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript" target="_blank">Mozilla Tutorial</a></li>
-							<li><a href="https://www.jetbrains.com/help/phpstorm/configuring-xdebug.html" target="_blank">PHPStorm Debugging</a></li>
-						</ul>
-					</section>
-				</section>
-			</div>
-		</div>
+            $firstname = "John";
+            $lastname = "Doe";
+            $email = "john@example.com";
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+            try {
+              $stmt->execute();
+            } catch (PDOException $e) {
+              $e->getMessage();
+            }
+          </code></pre>
+        </section>
+        <section>
+          <h2>Mit PHP DB auslesen</h2>
 
-		<script>
-			Reveal.initialize({
-				backgroundTransition: 'slide',
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+          <pre><code class="php" data-trim data-noescape>
+            $stmt = $conn->prepare("SELECT * from users");
+
+            try {
+                $stmt->execute();
+            } catch (PDOException $e) {
+                $e->getMessage();
+            }
+
+            $result = $stmt->get_result();
+
+            while ($row = $result->fetch_assoc()) {
+                printf ("%s\n", $row["firstname"]);
+            }
+          </code></pre>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>Übung</h2>
+          <ul>
+            <li>Legen Sie auf dem Server ein neues Verzeichnis an: <code class="hljs">~/public_html/PHP/</code></li>
+            <li>Bauen sie ein simples Formular mit HTML und PHP. Styling ist zu vernachlässigen</li>
+            <li>Das Prinzip soll in die Richtung Gästebuch gehen.</li>
+            <li>Beim Absenden des Formulars, sollen neue Werte in eine Datenbank geschrieben werden.</li>
+            <li>Zeigen sie darüber/darunter/daneben die Einträge der Tabelle</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Weitere Links</h2>
+          <ul>
+            <li><a href="https://www.w3schools.com/php/" target="_blank">W3Schools PHP Tutorial</a></li>
+            <li><a href="https://www.apachefriends.org/de/index.html" target="_blank">XAMPP</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript" target="_blank">Mozilla Tutorial</a></li>
+            <li><a href="https://www.jetbrains.com/help/phpstorm/configuring-xdebug.html" target="_blank">PHPStorm Debugging</a></li>
+          </ul>
+        </section>
+      </section>
+    </div>
+  </div>
+
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+
+  <script>
+    Reveal.initialize({
+      backgroundTransition: 'slide',
+      dependencies: [{
+        src: 'plugin/markdown/marked.js'
+      }, {
+        src: 'plugin/markdown/markdown.js'
+      }, {
+        src: 'plugin/notes/notes.js',
+        async: true
+      }, {
+        src: 'plugin/highlight/highlight.js',
+        async: true,
+        callback: function() {
+          hljs.initHighlightingOnLoad();
+        }
+      }]
+    });
+  </script>
+</body>
+
 </html>
 transition
